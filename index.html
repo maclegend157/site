@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Legendary Dating</title>
+<meta name="description" content="Legendary Dating by Mac Legend. Men's dating coaching in downtown San Diego. Not tricks, not lines: the whole thing rebuilt from the ground up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: rugged meets high-end. Industrial condensed caps against a fine italic serif, monochrome throughout.
+   Story order: pain (black and white) -> the method -> the life on the other side (the only full-color photos) -> Mac -> prices last. */
+:root {
+  --ink: #0C0C0B;
+  --char: #161615;
+  --steel: #2B2B29;
+  --ash: #8E8C86;
+  --stone: #C9C6BF;
+  --bone: #F2F0EB;
+
+  --caps: "Big Shoulders Display", "Oswald", "Impact", "Arial Narrow", sans-serif;
+  --serif: "Instrument Serif", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --t-xs: 0.78rem;
+  --t-s: 0.92rem;
+  --t-m: clamp(1rem, 0.97rem + 0.15vw, 1.08rem);
+  --t-l: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem);
+  --t-xl: clamp(2.2rem, 1.5rem + 3vw, 4.2rem);
+  --t-xxl: clamp(3.2rem, 1.6rem + 6.4vw, 8rem);
+
+  --mono-photo: grayscale(1) contrast(1.08) brightness(0.92);
+  --wrap: 1200px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body { background: var(--ink); color: var(--bone); font-family: var(--body); font-size: var(--t-m); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ink); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 800; text-wrap: balance; }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.kicker { font-weight: 600; font-size: var(--t-xs); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ash); }
+.caps { font-family: var(--caps); text-transform: uppercase; letter-spacing: 0.005em; line-height: 0.9; }
+.it { font-family: var(--serif); font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; }
+
+/* Photos */
+.ph { position: relative; overflow: hidden; background: var(--char); margin: 0; }
+.ph img { width: 100%; height: 100%; object-fit: cover; filter: var(--mono-photo); }
+.ph figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; background: linear-gradient(transparent, rgba(12,12,11,0.85)); font-size: var(--t-xs); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--bone); }
+.ph.color img { filter: none; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font: 700 0.86rem/1 var(--body); letter-spacing: 0.16em; text-transform: uppercase; padding: 18px 26px; border: 1.5px solid var(--bone); text-decoration: none; cursor: pointer; transition: background .15s ease, color .15s ease; }
+.btn-solid { background: var(--bone); color: var(--ink); }
+.btn-solid:hover { background: transparent; color: var(--bone); }
+.btn-line { background: transparent; color: var(--bone); }
+.btn-line:hover { background: var(--bone); color: var(--ink); }
+.btn .arrow { font-family: var(--serif); font-size: 1.2rem; letter-spacing: 0; text-transform: none; line-height: 0; }
+
+/* Header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--ink); border-bottom: 1px solid var(--steel); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; white-space: nowrap; }
+.brand .caps { font-size: 1.55rem; letter-spacing: 0.02em; line-height: 1; }
+.brand .it { font-size: 1.05rem; color: var(--ash); }
+header nav { display: flex; align-items: center; gap: 28px; }
+header nav a.nl { text-decoration: none; font-size: var(--t-s); color: var(--stone); }
+header nav a.nl:hover { color: var(--bone); }
+header .btn { padding: 12px 18px; font-size: 0.76rem; }
+@media (max-width: 860px) { header nav a.nl { display: none; } .brand .it { display: none; } }
+
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: clamp(28px, 4vw, 56px); align-items: end; padding-block: clamp(48px, 7vw, 96px) clamp(56px, 8vw, 104px); }
+.hero h1 { font-size: var(--t-xxl); margin-top: 22px; }
+.hero h1 .line2 { display: block; color: var(--ash); }
+.hero h1 .it { display: block; font-size: 0.6em; line-height: 1.05; color: var(--bone); margin-top: 0.14em; }
+.hero-sub { margin-top: 34px; display: grid; gap: 14px; max-width: 46ch; }
+.hero-sub p { font-size: var(--t-l); line-height: 1.45; color: var(--stone); }
+.hero-sub p b { color: var(--bone); font-weight: 600; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.hero .ph { aspect-ratio: 4 / 5; border: 1px solid var(--steel); }
+.hero .ph img { object-position: 50% 20%; }
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .ph { aspect-ratio: 4 / 3; order: -1; }
+}
+
+/* Sections */
+section.sec { border-top: 1px solid var(--steel); }
+section.sec > .wrap { padding-block: clamp(72px, 10vw, 128px); }
+.sec-head { display: grid; gap: 18px; margin-bottom: clamp(36px, 5vw, 64px); max-width: 860px; }
+.sec-head h2 { font-size: var(--t-xl); }
+
+/* Pain */
+.pain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--steel); }
+.pain li { padding: 30px 36px 30px 0; border-bottom: 1px solid var(--steel); font-family: var(--serif); font-size: clamp(1.3rem, 1.1rem + 0.75vw, 1.75rem); line-height: 1.28; color: var(--ash); min-width: 0; }
+.pain li:nth-child(odd) { border-right: 1px solid var(--steel); }
+.pain li:nth-child(even) { padding-left: 36px; padding-right: 0; }
+.pain li b { color: var(--bone); font-weight: 400; }
+@media (max-width: 760px) { .pain { grid-template-columns: 1fr; } .pain li, .pain li:nth-child(even) { padding: 24px 0; border-right: 0; } }
+.pain-feature { margin: clamp(48px, 7vw, 88px) 0 0; background: var(--bone); color: var(--ink); padding: clamp(28px, 5vw, 64px); }
+.pain-feature p { font-family: var(--caps); text-transform: uppercase; font-weight: 800; font-size: clamp(2.1rem, 1.3rem + 3.2vw, 4.4rem); line-height: 0.95; }
+.pain-feature p .it { display: block; margin-top: 18px; font-size: clamp(1.35rem, 1.05rem + 1.1vw, 2.1rem); line-height: 1.25; max-width: 40ch; color: #2E2D2A; }
+
+/* Bridge */
+.bridge .wrap { padding-block: clamp(72px, 10vw, 128px); display: grid; gap: 22px; }
+.bridge h2 { font-size: var(--t-xl); max-width: 18ch; }
+.bridge h2 .dim { color: var(--ash); }
+.bridge p { font-size: var(--t-l); color: var(--stone); max-width: 52ch; line-height: 1.45; }
+
+/* Method */
+.rebuild { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; border-top: 1px solid var(--steel); }
+.rebuild li { display: flex; align-items: baseline; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--steel); font-size: var(--t-l); line-height: 1.3; min-width: 0; }
+.rebuild li span { font-family: var(--serif); font-style: italic; color: var(--ash); font-size: 1rem; flex: none; width: 4.5em; }
+.rebuild li.last { grid-column: 1 / -1; }
+@media (max-width: 760px) { .rebuild { grid-template-columns: 1fr; } }
+
+.pillars-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 32px; margin: clamp(64px, 9vw, 112px) 0 28px; }
+.pillars-head h3 { font-family: var(--caps); text-transform: uppercase; font-size: clamp(2rem, 1.4rem + 2.4vw, 3.4rem); line-height: 0.95; }
+.pillars-head p { font-family: var(--serif); font-style: italic; font-size: var(--t-l); color: var(--stone); }
+.pillars { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.pillar { display: grid; gap: 14px; align-content: start; min-width: 0; background: var(--char); border: 1px solid var(--steel); padding: 26px 22px 24px; }
+.pillar .ic { width: 60px; height: 60px; border: 1.5px solid var(--bone); display: grid; place-items: center; margin-bottom: 10px; }
+.pillar .ic svg { width: 30px; height: 30px; fill: none; stroke: var(--bone); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.pillar h4 { margin: 0; font-family: var(--caps); text-transform: uppercase; font-size: 1.7rem; font-weight: 800; letter-spacing: 0.01em; line-height: 1; }
+.pillar p { font-size: var(--t-s); color: var(--ash); line-height: 1.45; }
+@media (max-width: 980px) { .pillars { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 28px; } }
+@media (max-width: 560px) { .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* The other side: the one full-color moment */
+.other .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; height: clamp(420px, 52vw, 680px); }
+.other .ph img { object-position: 50% 35%; }
+@media (max-width: 760px) {
+  .other .gallery { grid-template-columns: 1fr; height: auto; }
+  .other .gallery .ph { aspect-ratio: 4 / 5; }
+}
+.other-foot { margin-top: 28px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; }
+.other-foot p { color: var(--stone); font-size: var(--t-l); line-height: 1.45; max-width: 56ch; }
+.other-foot p b { color: var(--bone); font-weight: 600; }
+@media (max-width: 760px) { .other-foot { grid-template-columns: 1fr; } .other-foot .btn { justify-self: start; } }
+
+/* Weekend */
+.wk { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.wk-copy { display: grid; gap: 18px; }
+.wk-copy h2 { font-size: var(--t-xl); }
+.wk-copy p { color: var(--stone); max-width: 46ch; }
+.wk-copy .ph { aspect-ratio: 4 / 5; margin-top: 8px; }
+.wk-copy .ph img { object-position: 50% 80%; }
+.sched { display: grid; gap: 0; border: 1px solid var(--steel); }
+.day { padding: 24px; min-width: 0; }
+.day + .day { border-top: 1px solid var(--steel); }
+.day h3 { font-family: var(--caps); text-transform: uppercase; font-size: 1.6rem; letter-spacing: 0.02em; padding-bottom: 12px; border-bottom: 1px solid var(--steel); }
+.day ol { list-style: none; margin: 0; padding: 0; }
+.day li { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-bottom: 1px dashed var(--steel); }
+.day li:last-child { border-bottom: 0; }
+.day time { font-family: var(--caps); font-weight: 800; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.day strong { display: block; font-weight: 600; font-size: var(--t-s); }
+.day span { display: block; color: var(--ash); font-size: var(--t-s); line-height: 1.45; }
+@media (max-width: 900px) { .wk { grid-template-columns: 1fr; } .wk-copy .ph { aspect-ratio: 16 / 10; } }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.about-photos { display: grid; gap: 12px; }
+.about-photos .ph:first-child { aspect-ratio: 1 / 1; }
+.about-photos .ph:nth-child(2) { aspect-ratio: 16 / 10; }
+.about-photos .ph:nth-child(2) img { object-position: 50% 45%; }
+.about-copy { display: grid; gap: 20px; }
+.about-copy h2 { font-size: var(--t-xl); }
+.about-copy p { color: var(--stone); max-width: 60ch; }
+.about-copy p b { color: var(--bone); font-weight: 600; }
+.creed { margin-top: 8px; padding-left: 20px; border-left: 2px solid var(--bone); font-family: var(--serif); font-style: italic; font-size: var(--t-l); line-height: 1.35; max-width: 40ch; }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+
+/* Ladder (prices) */
+.ladder { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+.rung { background: var(--char); border: 1px solid var(--steel); padding: 26px 22px 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.rung .step { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.rung .step span { font-size: var(--t-xs); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--ash); }
+.rung h3 { font-family: var(--caps); text-transform: uppercase; font-size: 2rem; line-height: 0.95; letter-spacing: 0.01em; }
+.price { display: grid; gap: 4px; padding-block: 14px; border-top: 1px solid var(--steel); border-bottom: 1px solid var(--steel); }
+.price .big { font-family: var(--caps); font-weight: 800; font-size: 3rem; line-height: 0.95; font-variant-numeric: tabular-nums; }
+.price .big small { font-family: var(--body); font-size: 0.95rem; font-weight: 500; color: var(--ash); }
+.price .sub { font-size: var(--t-s); color: var(--ash); }
+.price .was { font-size: var(--t-s); color: var(--stone); }
+.price .strike { font-family: var(--caps); font-weight: 800; font-size: 2.4rem; line-height: 0.95; color: var(--ash); text-decoration: line-through; text-decoration-thickness: 3px; text-decoration-color: var(--bone); font-variant-numeric: tabular-nums; }
+.price .spots { font-size: var(--t-xs); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--bone); margin-top: 4px; }
+.includes { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--stone); line-height: 1.3; }
+.rung ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; font-size: var(--t-s); color: var(--stone); }
+.rung li { padding-left: 18px; position: relative; line-height: 1.45; }
+.rung li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 1.5px; background: var(--bone); }
+.rung .btn { margin-top: auto; width: 100%; }
+.seats { display: flex; align-items: center; gap: 10px; font-size: var(--t-xs); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+.seats i { width: 14px; height: 14px; border: 1.5px solid var(--bone); display: inline-block; }
+.seats i + i { margin-left: -4px; }
+.rung.top { background: var(--bone); color: var(--ink); border-color: var(--bone); }
+.rung.top .step span, .rung.top .price .sub { color: #5E5C57; }
+.rung.top .price { border-color: #CFCBC3; }
+.rung.top .includes, .rung.top ul { color: #2E2D2A; }
+.rung.top li::before { background: var(--ink); }
+.rung.top .btn { border-color: var(--ink); background: var(--ink); color: var(--bone); }
+.rung.top .btn:hover { background: transparent; color: var(--ink); }
+.rung.top .qual { font-family: var(--serif); font-style: italic; font-size: 1.05rem; line-height: 1.3; color: #2E2D2A; border-top: 1px solid #CFCBC3; padding-top: 14px; }
+.ladder-note { margin-top: 26px; font-size: var(--t-s); color: var(--ash); max-width: 70ch; }
+@media (max-width: 1020px) { .ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ladder { grid-template-columns: 1fr; } }
+
+/* FAQ */
+.faq { max-width: 860px; border-top: 1px solid var(--steel); }
+.faq details { border-bottom: 1px solid var(--steel); }
+.faq summary { cursor: pointer; list-style: none; padding: 24px 0; display: flex; justify-content: space-between; gap: 20px; font-weight: 600; font-size: var(--t-l); line-height: 1.3; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--caps); font-size: 1.8rem; line-height: 1; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: var(--stone); padding-bottom: 24px; max-width: 64ch; }
+
+/* Apply */
+.apply { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.apply-copy { display: grid; gap: 18px; }
+.apply-copy h2 { font-size: var(--t-xl); }
+.apply-copy p { color: var(--stone); max-width: 44ch; }
+.textline { margin-top: 10px; padding-top: 18px; border-top: 1px solid var(--steel); display: grid; gap: 6px; }
+.textline .num { font-family: var(--caps); font-weight: 800; font-size: 2.2rem; line-height: 1; letter-spacing: 0.02em; user-select: all; }
+form.card, .done { background: var(--char); border: 1px solid var(--steel); padding: clamp(22px, 4vw, 36px); display: grid; gap: 18px; min-width: 0; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 560px) { .row2 { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 7px; min-width: 0; }
+.field label { font-size: var(--t-xs); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--stone); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--bone); background: var(--ink); border: 1px solid var(--steel); border-radius: 0; padding: 14px; }
+.field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--bone) 50%), linear-gradient(135deg, var(--bone) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 40px; }
+.field textarea { min-height: 110px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--bone); }
+form .btn { justify-self: start; }
+.form-note { font-size: var(--t-xs); color: var(--ash); }
+.error { color: var(--bone); font-size: var(--t-s); border-left: 2px solid var(--bone); padding-left: 10px; }
+.done h3 { font-family: var(--caps); text-transform: uppercase; font-size: 2.4rem; line-height: 0.95; }
+.done p { color: var(--stone); }
+@media (max-width: 860px) { .apply { grid-template-columns: 1fr; } }
+
+/* Footer */
+footer.site { border-top: 1px solid var(--steel); }
+footer.site .wrap { padding-block: 40px 52px; display: grid; gap: 22px; }
+footer .big { font-family: var(--caps); font-weight: 900; text-transform: uppercase; font-size: clamp(3rem, 1rem + 10vw, 10rem); line-height: 0.82; color: var(--char); overflow-wrap: anywhere; }
+footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: var(--t-s); color: var(--ash); }
+</style>
+</head>
+<body>
+
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Legendary Dating, home"><span class="caps">Legendary Dating</span><span class="it">by Mac Legend</span></a>
+    <nav aria-label="Main">
+      <a class="nl" href="#method">The Method</a>
+      <a class="nl" href="#weekend">The Weekend</a>
+      <a class="nl" href="#about">About Mac</a>
+      <a class="nl" href="#programs">Programs</a>
+      <a class="btn btn-solid" href="#apply">Apply</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Private dating coaching for men &nbsp;/&nbsp; San Diego</p>
+        <h1 class="caps">
+          Friday night.
+          <span class="line2">Another night alone.</span>
+          <span class="it">You weren't built for this...</span>
+        </h1>
+        <div class="hero-sub">
+          <p>You come home to an empty place. You scroll. You match with women you don't want and get ignored by the ones you do.</p>
+          <p><b>Tonight, she's out with some guy who isn't you. How many more Fridays can you afford to lose?</b></p>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#apply">Apply now <span class="arrow">&rarr;</span></a>
+          <a class="btn btn-line" href="#method">How it works</a>
+        </div>
+      </div>
+      <figure class="ph">
+        <img src="hollywood.jpg" alt="Mac Legend at night on Hollywood Boulevard" width="878" height="878">
+      </figure>
+    </div>
+  </section>
+
+  <!-- PAIN -->
+  <section class="sec" aria-labelledby="pain-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Be honest with yourself</p>
+        <h2 id="pain-h" class="caps">Does any of this <span class="it">sound like you?</span></h2>
+      </div>
+      <ul class="pain">
+        <li>It's 1 AM. You're in bed watching other people's couple stories, swearing next month will be different. <b>You've been saying "next month" for two years.</b></li>
+        <li>It's Friday night and you're swiping again. You match with a girl you'd never look twice at in real life, and for one sick second you actually consider it. <b>Then you catch yourself in the bathroom mirror and wonder when you started settling for crumbs.</b></li>
+        <li>Your phone buzzes and your heart jumps. Maybe it's her. <b>It's DoorDash. It's always DoorDash.</b></li>
+        <li>Your last date said "this was fun," gave you the side-hug of death, <b>and left you on read forever.</b></li>
+        <li>A gorgeous woman smiled at you today. You stared at the sidewalk and kept walking. <b>You'll be replaying that one for a week.</b></li>
+        <li>You had the perfect thing to say, and you choked. Thirty seconds later another guy said it for you. <b>She laughed at his.</b></li>
+        <li>You paid for dinner, laughed at every joke, walked her to her car like a gentleman. <b>She was texting another guy before she left the parking lot.</b></li>
+        <li>The end of the night. She's standing right there, waiting for you to make a move. You freeze. "Well... goodnight." <b>You knew it was dead before you got home.</b></li>
+        <li>She cancelled an hour before the date. You texted back "no worries!" <b>Then you sat on the edge of your bed, fully dressed, cologne on, with nowhere to go.</b></li>
+        <li>Another wedding invite. Another "+1" you leave blank. <b>Another night at the singles table pretending you're fine.</b></li>
+        <li>Three years on the apps. Hundreds of matches. A handful of dates. Zero girlfriends. <b>You're paying a monthly subscription to get rejected.</b></li>
+        <li>You settle for whoever gives you attention, <b>because deep down you're scared that's the best you'll ever get.</b></li>
+      </ul>
+      <blockquote class="pain-feature">
+        <p>You're not getting any younger. <span class="it">Every year you wait, the excuses get easier, starting over gets harder, and you're that much closer to never having the dating life you've dreamed about since high school.</span></p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- BRIDGE -->
+  <section class="sec bridge" aria-labelledby="bridge-h">
+    <div class="wrap">
+      <p class="kicker">Here's the good news...</p>
+      <h2 id="bridge-h" class="caps"><span style="display:block">None of it is permanent...</span><span style="display:block" aria-hidden="true">&nbsp;</span><span style="display:block">And it's not too late...</span></h2>
+      <p>The guys you envy, the ones who walk into a room and leave with her number, weren't born that way. Somebody showed them.</p>
+      <p>This is where you learn it, in real places, with real women, and with someone in your corner who won't let you quit until you succeed.</p>
+      <div class="hero-cta" style="margin-top:10px">
+        <a class="btn btn-solid" href="#apply">I'm ready to fix this <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-line" href="#method">Show me how</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="sec" id="method" aria-labelledby="method-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">The method</p>
+        <h2 id="method-h" class="caps">I teach men how to become the man <span class="it">women actually want.</span></h2>
+      </div>
+      <ul class="rebuild">
+        <li><span>Rebuild</span>How you look</li>
+        <li><span>Rebuild</span>How you carry yourself</li>
+        <li><span>Rebuild</span>How you talk to women</li>
+        <li><span>Rebuild</span>How you text</li>
+        <li><span>Rebuild</span>How you run a date</li>
+        <li><span>Rebuild</span>How you close</li>
+        <li class="last"><span>And</span>How you stop sabotaging it the second it's finally going well</li>
+      </ul>
+
+      <div class="pillars-head">
+        <h3>Five pillars.</h3>
+        <p>We work all five, or we don't work.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></svg></span>
+          <h4>Physical</h4>
+          <p>Body, style, grooming, and how you take up space in a room.</p>
+        </div>
+        <div class="pillar">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span>
+          <h4>Mental</h4>
+          <p>Discipline, focus, and the story you keep telling yourself.</p>
+        </div>
+        <div class="pillar">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg></span>
+          <h4>Emotional</h4>
+          <p>Rejection, nerves, and facing the guy in the mirror.</p>
+        </div>
+        <div class="pillar">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span>
+          <h4>Relational</h4>
+          <p>Attraction, dating, and turning a spark into something real.</p>
+        </div>
+        <div class="pillar">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/><circle cx="5" cy="10" r="2.2"/><path d="M1.5 19a3.6 3.6 0 0 1 5-3.3"/><circle cx="19" cy="10" r="2.2"/><path d="M22.5 19a3.6 3.6 0 0 0-5-3.3"/></svg></span>
+          <h4>Social</h4>
+          <p>Your circle, your city, and your place in it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE OTHER SIDE (color) -->
+  <section class="sec other" aria-labelledby="other-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">The other side</p>
+        <h2 id="other-h" class="caps">This is what it looks like <span class="it">when it's handled.</span></h2>
+      </div>
+      <div class="gallery">
+        <figure class="ph color"><img src="rooftop.jpg" alt="Mac on a downtown San Diego rooftop" loading="lazy"><figcaption>Rooftop, downtown San Diego</figcaption></figure>
+        <figure class="ph color"><img src="festival.jpg" alt="Mac at a music festival at night" loading="lazy"><figcaption>Festival season</figcaption></figure>
+        <figure class="ph color"><img src="pool.jpg" alt="Mac laughing on a pool float" loading="lazy"><figcaption>Saturday afternoon</figcaption></figure>
+      </div>
+      <div class="other-foot">
+        <p>A full calendar. Friends who want you there. Women who are glad you walked over. <b>None of this is luck. It's a skill, and I'll teach it to you.</b></p>
+        <a class="btn btn-solid" href="#apply">I want this <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKEND -->
+  <section class="sec" id="weekend" aria-labelledby="wk-h">
+    <div class="wrap wk">
+      <div class="wk-copy">
+        <p class="kicker">In person / The Weekend</p>
+        <h2 id="wk-h" class="caps">Fly in Friday. <span class="it">Leave a different man on Sunday.</span></h2>
+        <p>Two nights in my neighborhood with a small group of 8 men, me, and another coach. You'll do the thing you've been avoiding, with a coach close enough to help and far enough to stay out of it, and seven other guys pushing you forward.</p>
+        <figure class="ph"><img src="view.jpg" alt="Downtown San Diego at night from Mac's high-rise" loading="lazy"><figcaption>The view from my place, East Village</figcaption></figure>
+      </div>
+      <div class="sched" role="group" aria-label="Sample weekend schedule">
+        <div class="day">
+          <h3>Friday</h3>
+          <ol>
+            <li><time>6:00</time><div><strong>Fit check, East Village</strong><span>Clothes, posture, and how you walk into a room.</span></div></li>
+            <li><time>7:30</time><div><strong>Dinner, Little Italy</strong><span>Conversation reps at the bar before the food comes.</span></div></li>
+            <li><time>9:30</time><div><strong>Out in the Gaslamp</strong><span>First approaches with live feedback.</span></div></li>
+          </ol>
+        </div>
+        <div class="day">
+          <h3>Saturday</h3>
+          <ol>
+            <li><time>2:00</time><div><strong>Daytime, Seaport Village</strong><span>Lower pressure, more reps, more confidence.</span></div></li>
+            <li><time>8:00</time><div><strong>Night two, you lead</strong><span>You run the night. We step back.</span></div></li>
+          </ol>
+        </div>
+        <div class="day">
+          <h3>Sunday</h3>
+          <ol>
+            <li><time>10:00</time><div><strong>Debrief over breakfast</strong><span>What worked, what didn't, and your next 30 days.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec" id="about" aria-labelledby="about-h">
+    <div class="wrap about">
+      <div class="about-photos">
+        <figure class="ph"><img src="podcast.jpg" alt="Mac Legend speaking on a podcast" loading="lazy" style="object-position:50% 30%"></figure>
+        <figure class="ph"><img src="family.jpg" alt="Mac with his mom, his sister and his dog at sunset" loading="lazy"><figcaption>With my mom and sister</figcaption></figure>
+      </div>
+      <div class="about-copy">
+        <p class="kicker">About</p>
+        <h2 id="about-h" class="caps">Hi, I'm Mac.</h2>
+        <p><b>Bringing people together is the thing I'm best at.</b> I live in a high-rise in East Village, a few blocks from the Gaslamp, and I'm out most nights of the week. I host RATED, a dating show we film right here downtown.</p>
+        <p>I've spent years getting good at this. I started with the pickup stuff, outgrew it, and learned what actually works. I'm the oldest of four with three sisters, I'm close with my mom, and the women I date tell me I understand women better than most guys do.</p>
+        <p>I started coaching because guys kept asking me for help. Shy guys. Guys fresh off a breakup. Guys who'd never had a girlfriend. Guys who looked great on paper and still went home alone every night. This is private. I take a very small number of men at a time, and I'm in it with you until your dating life looks the way you decide it should look.</p>
+        <p class="creed">Tough love from a friend who's been there.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS (prices live here, at the bottom) -->
+  <section class="sec" id="programs" aria-labelledby="ladder-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Programs</p>
+        <h2 id="ladder-h" class="caps">It's time to get serious. <span class="it" style="display:block;margin-top:0.15em">Choose your level of commitment.</span></h2>
+      </div>
+      <div class="ladder">
+        <article class="rung">
+          <div class="step"><span>Online</span><span>Monthly</span></div>
+          <h3>Private Group Chat</h3>
+          <div class="price"><span class="big">$197<small> /month</small></span><span class="sub">Cancel anytime</span></div>
+          <ul>
+            <li>Direct access to me in a private group chat</li>
+            <li>Weekly group coaching calls. Ask anything.</li>
+            <li>Direct access to vetted coaches and men who are veterans in the field</li>
+            <li>Send your texts, profiles and situations for honest feedback</li>
+            <li>Ask anything before and after your dates</li>
+            <li>A room full of men working on the same thing</li>
+          </ul>
+          <a class="btn btn-line" href="#apply" data-tier="Private Group Chat">Join the chat</a>
+        </article>
+        <article class="rung">
+          <div class="step"><span>In person</span><span>One weekend</span></div>
+          <h3>The Weekend</h3>
+          <div class="price"><span class="big">$2,997</span><span class="sub">In person, downtown San Diego. Group of 8 men.</span></div>
+          <p class="includes">Everything in the Group Chat, plus:</p>
+          <ul>
+            <li>A small group of 8 men, two coaches</li>
+            <li>Two coached nights out with me and another coach</li>
+            <li>Gaslamp, Little Italy and East Village</li>
+            <li>Style and first-impression session</li>
+            <li>Sunday debrief and a 30-day plan</li>
+          </ul>
+          <a class="btn btn-line" href="#apply" data-tier="The Weekend">Book a weekend</a>
+        </article>
+        <article class="rung">
+          <div class="step"><span>One-on-one</span><span>90 days</span></div>
+          <h3>90-Day One-on-One</h3>
+          <div class="price"><span class="strike" aria-label="Regular price $9,997">$9,997</span><span class="big">$4,997</span><span class="spots">Next 3 spots only</span></div>
+          <div class="seats" aria-label="Next three spots"><i></i><i></i><i></i><span>Next 3 spots</span></div>
+          <p class="includes">Everything in The Weekend, plus:</p>
+          <ul>
+            <li>Weekly one-on-one calls</li>
+            <li>Direct text access to me</li>
+            <li>Full AI dating profile overhaul, no photoshoot needed</li>
+            <li>A written goal and a plan to hit it</li>
+          </ul>
+          <a class="btn btn-solid" href="#apply" data-tier="90-Day One-on-One">Claim a spot</a>
+        </article>
+        <article class="rung top">
+          <div class="step"><span>Invitation only</span><span>1 year</span></div>
+          <h3>Prodigy Program</h3>
+          <div class="price"><span class="big">$100,000</span><span class="sub">By application only</span></div>
+          <p class="includes">Everything in the 90-Day, plus:</p>
+          <ul>
+            <li>A full year of intensive one-on-one</li>
+            <li>All five pillars, every week</li>
+            <li>In-person immersion in San Diego</li>
+            <li>Maximum 3 men at a time</li>
+          </ul>
+          <p class="qual">If that number just ended this for you, good. It saved us both time.</p>
+          <a class="btn" href="#apply" data-tier="Prodigy Program">Apply for Prodigy</a>
+        </article>
+      </div>
+      <p class="ladder-note">Not sure which one fits? Apply anyway and pick "Not sure yet." I'll tell you which one I'd do if I were you.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Questions</p>
+        <h2 id="faq-h" class="caps">Before you apply</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Is this pickup-artist stuff?</summary><p>No. I don't believe in PUA tactics. This is efficient game that gets you RESULTS for minimal effort, the highest ROI you can get in dating. You'll learn how to be cool enough to get women interested before the date, start conversations without overthinking them, and show a woman you're interested in a way she'll actually respond to.</p></details>
+        <details><summary>I don't live in San Diego. Can I still work with you?</summary><p>Yes. I'm based in San Diego, but I work with clients all over the world. The Weekend and the Prodigy Program must be done in person.</p></details>
+        <details><summary>Why is the 90-Day $4,997 now and $9,997 later?</summary><p>I'm taking my next three one-on-one clients at $4,997 in exchange for honest feedback and a testimonial if you get results. Once those three spots are gone, the price goes to $9,997.</p></details>
+        <details><summary>Do you guarantee results?</summary><p>No honest coach can promise you a girlfriend by a certain date. What I can promise is that nobody out there is more invested in YOUR success than me, and nobody will try harder or do more to help you win.</p></details>
+        <details><summary>Is this confidential?</summary><p>Completely. Nobody hears your name or your story from me, and you never appear on camera unless you ask to.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section class="sec" id="apply" aria-labelledby="apply-h">
+    <div class="wrap apply">
+      <div class="apply-copy">
+        <p class="kicker">Apply</p>
+        <h2 id="apply-h" class="caps">Three things. <span class="it">One paragraph each.</span></h2>
+        <p>Your age, what your dating life actually looks like right now, and what you want it to look like a year from now. I read every one, and I only respond to the ones I'd take.</p>
+        <div class="textline">
+          <p class="kicker">Rather text?</p>
+          <span class="num">(619) 665-2011</span>
+        </div>
+      </div>
+      <div>
+        <form class="card" id="applyForm" novalidate>
+          <div class="row2">
+            <div class="field"><label for="f-name">First name</label><input id="f-name" name="name" autocomplete="given-name" required></div>
+            <div class="field"><label for="f-age">Age</label><input id="f-age" name="age" inputmode="numeric" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="f-city">City</label><input id="f-city" name="city" autocomplete="address-level2" required></div>
+            <div class="field">
+              <label for="f-tier">Interested in</label>
+              <select id="f-tier" name="tier">
+                <option>Not sure yet</option>
+                <option>Private Group Chat</option>
+                <option>The Weekend</option>
+                <option>90-Day One-on-One</option>
+                <option>Prodigy Program</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="f-now">What your dating life looks like right now</label><textarea id="f-now" name="now" placeholder="Be honest. Nobody reads this but me."></textarea></div>
+          <div class="field"><label for="f-year">What you want it to look like a year from now</label><textarea id="f-year" name="year"></textarea></div>
+          <p class="error" id="formError" hidden>Fill in your name, age, phone, email and city.</p>
+          <button class="btn btn-solid" type="submit">Send application <span class="arrow">&rarr;</span></button>
+          <p class="form-note">Private. Only used to contact you about coaching.</p>
+        </form>
+        <div class="done" id="applyDone" hidden>
+          <p class="kicker">Received</p>
+          <h3>Good move, <span id="doneName">man</span>.</h3>
+          <p>If you're a fit, I'll text you within a day to set up a call.</p>
+          <a class="btn btn-solid" id="bookLink" href="#apply" target="_blank" rel="noopener" style="justify-self:start">Book a time now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="big" aria-hidden="true">Legendary</div>
+    <div class="row">
+      <span>Legendary Dating by Mac Legend</span>
+      <span>San Diego, California</span>
+      <span>legendarydatingco.com</span>
+      <span>&copy; 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Fill these in when the site goes live on your own domain.
+  const CONFIG = {
+    BOOKING_URL: "",    // e.g. your Calendly link
+    FORM_ENDPOINT: ""   // e.g. a Formspree or Tally endpoint that emails you each application
+  };
+
+  const form = document.getElementById("applyForm");
+  const done = document.getElementById("applyDone");
+  const err = document.getElementById("formError");
+  const book = document.getElementById("bookLink");
+  const tierSelect = document.getElementById("f-tier");
+
+  if (CONFIG.BOOKING_URL) { book.href = CONFIG.BOOKING_URL; } else { book.hidden = true; }
+
+  document.querySelectorAll("[data-tier]").forEach((el) => {
+    el.addEventListener("click", () => { tierSelect.value = el.dataset.tier; });
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    const required = ["name", "age", "phone", "email", "city"];
+    const missing = required.filter((k) => !String(data[k] || "").trim());
+    err.hidden = missing.length === 0;
+    if (missing.length) { document.getElementById("f-" + missing[0]).focus(); return; }
+    if (CONFIG.FORM_ENDPOINT) {
+      try {
+        await fetch(CONFIG.FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) });
+      } catch (_) {}
+    }
+    document.getElementById("doneName").textContent = String(data.name).trim().split(" ")[0];
+    form.hidden = true;
+    done.hidden = false;
+    done.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+</script>
+
+</body>
+</html>
