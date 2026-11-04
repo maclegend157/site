@@ -581,7 +581,7 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
           <div class="field"><label for="f-now">What your dating life looks like right now</label><textarea id="f-now" name="now" placeholder="Be honest. Nobody reads this but me."></textarea></div>
           <div class="field"><label for="f-year">What you want it to look like a year from now</label><textarea id="f-year" name="year"></textarea></div>
           <p class="error" id="formError" hidden>Fill in your name, age, phone, email and city.</p>
-          <button class="btn btn-solid" type="submit">Send application <span class="arrow">&rarr;</span></button>
+          <button class="btn btn-solid" type="submit" id="submitBtn">Send application <span class="arrow">&rarr;</span></button>
           <p class="form-note">Private. Only used to contact you about coaching.</p>
         </form>
         <div class="done" id="applyDone" hidden>
@@ -611,7 +611,7 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
   // Fill these in when the site goes live on your own domain.
   const CONFIG = {
     BOOKING_URL: "",    // e.g. your Calendly link
-    FORM_ENDPOINT: ""   // e.g. a Formspree or Tally endpoint that emails you each application
+    FORM_ENDPOINT: "https://formspree.io/f/xvkkdqbz"
   };
 
   const form = document.getElementById("applyForm");
@@ -631,12 +631,29 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
     const data = Object.fromEntries(new FormData(form).entries());
     const required = ["name", "age", "phone", "email", "city"];
     const missing = required.filter((k) => !String(data[k] || "").trim());
+    err.textContent = "Fill in your name, age, phone, email and city.";
     err.hidden = missing.length === 0;
     if (missing.length) { document.getElementById("f-" + missing[0]).focus(); return; }
-    if (CONFIG.FORM_ENDPOINT) {
-      try {
-        await fetch(CONFIG.FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) });
-      } catch (_) {}
+    const btn = document.getElementById("submitBtn");
+    const btnHtml = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+    data._subject = "New application: " + String(data.name).trim() + ", " + String(data.age).trim() + " (" + data.tier + ")";
+    let ok = false;
+    try {
+      const res = await fetch(CONFIG.FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
+      });
+      ok = res.ok;
+    } catch (_) { ok = false; }
+    btn.disabled = false;
+    btn.innerHTML = btnHtml;
+    if (!ok) {
+      err.textContent = "Something went wrong sending your application. Please try again, or text me at the number on this page.";
+      err.hidden = false;
+      return;
     }
     document.getElementById("doneName").textContent = String(data.name).trim().split(" ")[0];
     form.hidden = true;
