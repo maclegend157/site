@@ -117,6 +117,14 @@ section.sec > .wrap { padding-block: clamp(72px, 10vw, 128px); }
 .bridge h2 .dim { color: var(--ash); }
 .bridge p { font-size: var(--t-l); color: var(--stone); max-width: 52ch; line-height: 1.45; }
 
+/* Who it's for */
+.who { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.who-card { background: var(--char); border: 1px solid var(--steel); padding: 28px 24px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.who-card h3 { font-family: var(--caps); text-transform: uppercase; font-size: 1.9rem; line-height: 0.95; letter-spacing: 0.01em; }
+.who-card .it { font-size: 1.15rem; color: var(--bone); line-height: 1.3; }
+.who-card p { color: var(--ash); font-size: var(--t-s); line-height: 1.5; }
+@media (max-width: 860px) { .who { grid-template-columns: 1fr; } }
+
 /* Method */
 .rebuild { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; border-top: 1px solid var(--steel); }
 .rebuild li { display: flex; align-items: baseline; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--steel); font-size: var(--t-l); line-height: 1.3; min-width: 0; }
@@ -335,6 +343,33 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
     </div>
   </section>
 
+  <!-- WHO IT'S FOR -->
+  <section class="sec" aria-labelledby="who-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">Who I work with</p>
+        <h2 id="who-h" class="caps">Most of my guys are <span class="it">one of these three.</span></h2>
+      </div>
+      <div class="who">
+        <div class="who-card">
+          <h3>Successful. Still single.</h3>
+          <p class="it">"I built everything else on purpose. Why can't I figure this out?"</p>
+          <p>Career handled, money handled, gym handled. Dating is the one part of your life that still runs on luck, and you hate that.</p>
+        </div>
+        <div class="who-card">
+          <h3>Back in the game.</h3>
+          <p class="it">"I stepped away for a few years and the whole thing changed."</p>
+          <p>Fresh off a breakup, a divorce, or a long relationship. The rules you knew don't work anymore, and starting over at this age feels humiliating.</p>
+        </div>
+        <div class="who-card">
+          <h3>Done with the apps.</h3>
+          <p class="it">"Hundreds of matches. A handful of dates. Nothing real."</p>
+          <p>You're paying to get ignored. You want to meet women in real life and know exactly what to say when you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- METHOD -->
   <section class="sec" id="method" aria-labelledby="method-h">
     <div class="wrap">
@@ -412,6 +447,7 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
         <p class="kicker">In person / The Weekend</p>
         <h2 id="wk-h" class="caps">Fly in Friday. <span class="it">Leave a different man on Sunday.</span></h2>
         <p>Two nights in my neighborhood with a small group of 8 men, me, and another coach. You'll do the thing you've been avoiding, with a coach close enough to help and far enough to stay out of it, and seven other guys pushing you forward.</p>
+        <p>This isn't a touring bootcamp that leaves town on Monday. It's 8 men and 2 coaches, so you get real attention, and I live here, so I'm still in your corner for the 30 days after.</p>
         <figure class="ph"><img src="view.jpg" alt="Downtown San Diego at night from Mac's high-rise" loading="lazy"><figcaption>The view from my place, East Village</figcaption></figure>
       </div>
       <div class="sched" role="group" aria-label="Sample weekend schedule">
@@ -426,6 +462,7 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
         <div class="day">
           <h3>Saturday</h3>
           <ol>
+            <li><time>11:00</time><div><strong>Classroom over coffee</strong><span>Your texts, your dating profile, and what to say in the moments where you usually freeze.</span></div></li>
             <li><time>2:00</time><div><strong>Daytime, Seaport Village</strong><span>Lower pressure, more reps, more confidence.</span></div></li>
             <li><time>8:00</time><div><strong>Night two, you lead</strong><span>You run the night. We step back.</span></div></li>
           </ol>
@@ -487,10 +524,12 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
           <p class="includes">Everything in the Group Chat, plus:</p>
           <ul>
             <li>A small group of 8 men, two coaches</li>
-            <li>Two coached nights out with me and another coach</li>
+            <li>Two coached nights out with live feedback</li>
             <li>Gaslamp, Little Italy and East Village</li>
             <li>Style and first-impression session</li>
-            <li>Sunday debrief and a 30-day plan</li>
+            <li>Texting and dating profile teardown</li>
+            <li>Sunday debrief and a written 30-day plan</li>
+            <li>30 days of the Group Chat included</li>
           </ul>
           <a class="btn btn-line" href="#apply" data-tier="The Weekend">Book a weekend</a>
         </article>
@@ -503,8 +542,9 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
           <ul>
             <li>Weekly one-on-one calls</li>
             <li>Direct text access to me</li>
+            <li>Every text, profile and date reviewed before and after</li>
             <li>Full AI dating profile overhaul, no photoshoot needed</li>
-            <li>A written goal and a plan to hit it</li>
+            <li>A written goal, a plan to hit it, and a check-in on it every two weeks</li>
           </ul>
           <a class="btn btn-solid" href="#apply" data-tier="90-Day One-on-One">Claim a spot</a>
         </article>
@@ -538,6 +578,8 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
         <details><summary>Is this pickup-artist stuff?</summary><p>No. I don't believe in PUA tactics. This is efficient game that gets you RESULTS for minimal effort, the highest ROI you can get in dating. You'll learn how to be cool enough to get women interested before the date, start conversations without overthinking them, and show a woman you're interested in a way she'll actually respond to.</p></details>
         <details><summary>I don't live in San Diego. Can I still work with you?</summary><p>Yes. I'm based in San Diego, but I work with clients all over the world. The Weekend and the Prodigy Program must be done in person.</p></details>
         <details><summary>Why is the 90-Day $4,997 now and $9,997 later?</summary><p>I'm taking my next three one-on-one clients at $4,997 in exchange for honest feedback and a testimonial if you get results. Once those three spots are gone, the price goes to $9,997.</p></details>
+        <details><summary>What happens on the call after I apply?</summary><p>It's a real conversation, not a sales pitch dressed up as a "free strategy session." I'll tell you what I think is holding you back and which program, if any, I'd do in your shoes. The prices are already on this page, so there are no surprises.</p></details>
+        <details><summary>How is The Weekend different from a dating bootcamp?</summary><p>Most bootcamps fly into a city, run 10 to 15 guys through it, and leave. The Weekend is 8 men and 2 coaches in my own neighborhood. I know these streets and these venues, and I'm still here for the 30 days after, in the group chat, when the real work starts.</p></details>
         <details><summary>Do you guarantee results?</summary><p>No honest coach can promise you a girlfriend by a certain date. What I can promise is that nobody out there is more invested in YOUR success than me, and nobody will try harder or do more to help you win.</p></details>
         <details><summary>Is this confidential?</summary><p>Completely. Nobody hears your name or your story from me, and you never appear on camera unless you ask to.</p></details>
       </div>
