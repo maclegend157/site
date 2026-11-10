@@ -57,6 +57,7 @@ img { display: block; max-width: 100%; }
 .ph img { width: 100%; height: 100%; object-fit: cover; filter: var(--mono-photo); }
 .ph figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; background: linear-gradient(transparent, rgba(12,12,11,0.85)); font-size: var(--t-xs); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--bone); }
 .ph.color img { filter: none; }
+.ph picture { display: contents; }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font: 700 0.86rem/1 var(--body); letter-spacing: 0.16em; text-transform: uppercase; padding: 18px 26px; border: 1.5px solid var(--bone); text-decoration: none; cursor: pointer; transition: background .15s ease, color .15s ease; }
@@ -93,7 +94,7 @@ header .btn { padding: 12px 18px; font-size: 0.76rem; }
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero .ph { aspect-ratio: 4 / 3; order: -1; }
-  .hero .ph img { object-position: 50% 0%; }
+  .hero .ph img { object-position: 50% 12%; }
 }
 
 /* Sections */
@@ -310,7 +311,10 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
         </div>
       </div>
       <figure class="ph color">
-        <img src="hollywood.jpg" alt="Mac Legend at night on Hollywood Boulevard" width="878" height="878">
+        <picture>
+          <source media="(max-width: 860px)" srcset="hollywood-m.jpg?v=2" width="878" height="1048">
+          <img src="hollywood.jpg" alt="Mac Legend at night on Hollywood Boulevard" width="878" height="878">
+        </picture>
       </figure>
     </div>
   </section>
