@@ -610,6 +610,7 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
           </div>
           <div class="field"><label for="f-now">What your dating life looks like right now</label><textarea id="f-now" name="now" placeholder="Be honest. Nobody reads this but me."></textarea></div>
           <div class="field"><label for="f-year">What you want it to look like a year from now</label><textarea id="f-year" name="year"></textarea></div>
+          <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
           <p class="error" id="formError" hidden>Fill in your name, age, phone, email and city.</p>
           <button class="btn btn-solid" type="submit" id="submitBtn">Send application <span class="arrow">&rarr;</span></button>
           <p class="form-note">Private. Only used to contact you about coaching. See our <a href="privacy.html">privacy policy</a>.</p>
@@ -644,6 +645,7 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
     BOOKING_URL: "",    // e.g. your Calendly link
     FORM_ENDPOINT: "https://formspree.io/f/xvkkdqbz"
   };
+  const loadedAt = Date.now();
 
   const form = document.getElementById("applyForm");
   const done = document.getElementById("applyDone");
@@ -665,6 +667,12 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
     err.textContent = "Fill in your name, age, phone, email and city.";
     err.hidden = missing.length === 0;
     if (missing.length) { document.getElementById("f-" + missing[0]).focus(); return; }
+    // Spam check: bots fill the hidden field or submit within seconds. Show success, send nothing.
+    if (String(data._gotcha || "").trim() || Date.now() - loadedAt < 3000) {
+      form.hidden = true;
+      done.hidden = false;
+      return;
+    }
     const btn = document.getElementById("submitBtn");
     const btnHtml = btn.innerHTML;
     btn.disabled = true;
